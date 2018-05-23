@@ -1,0 +1,50 @@
+POST / items
+
+en entrée :
+- item:
+      product_reference:
+        type: string
+        description: identifiant matrix et ccm du produit
+      title:
+        type: string
+        description: Libellé du produit
+      ccm_points:
+        type: string
+        description: Prix TTC en CM+
+      vat:
+        type: string
+        description: montant TVA
+      with_vat:
+        type: string
+        description: Prix TTC
+      without_vat:
+        type: string
+        description: Prix HT
+      color[]: /* facultatif */
+        type: array
+        description: liste des couleurs au choix produit
+en sortie : Ø
+        
+PUT /items/{product_reference}
+
+en entrée :
+- item:
+      title:
+        type: string
+        description: Libellé du produit
+      ccm_points:
+        type: string
+        description: Prix TTC en CM+
+      vat:
+        type: string
+        description: montant TVA
+      with_vat:
+        type: string
+        description: Prix TTC
+      without_vat:
+        type: string
+        description: Prix HT
+      color[]: /* facultatif */
+        type: array
+        description: liste des couleurs au choix produit
+ en sortie : Ø
